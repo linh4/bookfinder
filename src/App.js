@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Search from './components/Search'
+import ShowPage from './components/ShowPage'
 
 class App extends Component {
+
+  state = {
+    books: [],
+    loading: null
+  }
+
+  handleSearch = (term) => {
+    if (term === '') {
+      this.setState({books: null, loading: false})
+    } else {
+      this.setState({books: [], loading: true})
+      setTimeout(() => {
+        return fetch(`https://www.googleapis.com/books/v1/volumes?q=${term}`)
+        .then(res => res.json())
+        .then(data => this.setState({books: data.items, loading: false}))
+        .catch(err => console.log(err))
+      }, 1000)
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>BOOK FINDER</h1>
+        <Search handleSearch={this.handleSearch}/>
+        <ShowPage books={this.state.books} loading={this.state.loading}/>
       </div>
     );
   }
