@@ -104,6 +104,12 @@ img {
 h2 {
   padding-top: 20px;
   color: #606060;
+  max-height: 4.5em;
+  overflow: hidden;
+}
+.author {
+  max-height: 3.8em;
+  overflow: hidden;
 }
 .info-box > p {
   margin: 0;
@@ -153,7 +159,7 @@ h2 {
   }
   .book-container {
     grid-template-columns: auto;
-    width: 100%;
+    width: 90%;
   }
   img {
     float: none;
@@ -172,11 +178,17 @@ h2 {
     text-align: center;
     height: auto;
   }
+  .info-box > p {
+    color: #827d77;
+  }
   .link-btn {
     position: static;
     margin: 20px auto;
   }
-  h2 {
+  h2,
+  .author {
     margin: 0;
+    max-height: 100%;
+    overflow: auto;
   }
 }
