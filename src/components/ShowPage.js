@@ -22,7 +22,7 @@ const renderBooks = (books) => {
 
         <p>Published By: {info.publisher}</p>
 
-        <a className="link-btn" href={info.infoLink}>See this Book</a>
+        <a className="link-btn" href={info.infoLink} target="_blank" rel="noopener noreferrer">See this Book</a>
       </div>
 
     </div>)
