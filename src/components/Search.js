@@ -24,13 +24,13 @@ class Search extends Component {
       <div className="search-box">
         <form onSubmit={this.handleSubmit}>
           <input
-            type="text"
+            type="search"
             name="book"
             onChange={this.handleChange}
             value={this.state.term || ''}
-            className="input-search"/>
-          <span onClick={this.handleClear}>x</span>
-          <input type="submit" value="Search"/>
+            className="search-bar"
+            placeholder="Search by book title or author..."/>
+          <input className="search-btn" type="submit" value="Search"/>
         </form>
       </div>
     )

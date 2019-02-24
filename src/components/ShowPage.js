@@ -7,11 +7,33 @@ const override = css`
     margin: 0 auto;
 `;
 
+const imgLink = "https://images.unsplash.com/photo-1537495329792-41ae41ad3bf0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+
+const renderBooks = (books) => {
+  return books.map(book => {
+    const info = book.volumeInfo
+    return (<div key={book.id} className="each-book">
+
+      {info.imageLinks ? <img src={info.imageLinks["thumbnail"]} alt={info.title}/> : <img src={imgLink} alt="no cover book" className="dif-img"/>}
+
+      <div className="info-box">
+        <h2>{info.title}</h2>
+        {info.authors ? info.authors.map(author => <p key={author}>By: {author}</p>) : <div>By: No authors</div>}
+
+        <p>Published By: {info.publisher}</p>
+
+        <a className="link-btn" href={info.infoLink}>See this Book</a>
+      </div>
+
+    </div>)
+  })
+}
+
 const ShowPage = ({books, loading}) => {
   if (!books) {
     return <>
-      <div>Not found</div>
-      <div>Nothing here yet. Try searching for a book</div>
+      <p className="empty-term">Error: Please provide a search query first!</p>
+      <div className="no-show">Nothing here yet. Try searching for a book</div>
     </>
   }
   else if (loading) {
@@ -20,29 +42,15 @@ const ShowPage = ({books, loading}) => {
          css={override}
          sizeUnit={"px"}
          size={15}
-         color={'pink'}
+         color={'#CD637E'}
          loading={loading}
        />
      </div>)
   }
   else if (books && !loading && books.length > 0) {
-     return books.map(book => {
-      const info = book.volumeInfo
-      return (<div key={book.id}>
-
-        {info.imageLinks ? <img src={info.imageLinks["thumbnail"]} alt={info.title}/> : <img src="https://images.unsplash.com/photo-1537495329792-41ae41ad3bf0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="no cover book"/>}
-
-        <h2>{info.title}</h2>
-        {info.authors ? info.authors.map(author => <p key={author}>By: {author}</p>) : <div>By: No authors</div>}
-
-        <p>Published By: {info.publisher}</p>
-
-        <a href={info.infoLink}>See this Book</a>
-
-      </div>)
-    })
+     return <div className="book-container">{renderBooks(books)}</div>
   } else {
-    return <div>Nothing here yet. Try searching for a book</div>
+    return <div className="no-show">Nothing here yet - Try searching for a book!</div>
   }
 }
 
