@@ -1,13 +1,13 @@
 {
-  "main.css": "/bookfinder/static/css/main.f9b155be.chunk.css",
-  "main.js": "/bookfinder/static/js/main.594b158d.chunk.js",
-  "main.js.map": "/bookfinder/static/js/main.594b158d.chunk.js.map",
+  "main.css": "/bookfinder/static/css/main.b563032c.chunk.css",
+  "main.js": "/bookfinder/static/js/main.7f0920e2.chunk.js",
+  "main.js.map": "/bookfinder/static/js/main.7f0920e2.chunk.js.map",
   "runtime~main.js": "/bookfinder/static/js/runtime~main.ea931453.js",
   "runtime~main.js.map": "/bookfinder/static/js/runtime~main.ea931453.js.map",
   "static/js/2.66778f58.chunk.js": "/bookfinder/static/js/2.66778f58.chunk.js",
   "static/js/2.66778f58.chunk.js.map": "/bookfinder/static/js/2.66778f58.chunk.js.map",
   "index.html": "/bookfinder/index.html",
-  "precache-manifest.20c7d82d1265ebf507d9ab69c268b04b.js": "/bookfinder/precache-manifest.20c7d82d1265ebf507d9ab69c268b04b.js",
+  "precache-manifest.45f94e17f7b1552cbdb39b227029cf5d.js": "/bookfinder/precache-manifest.45f94e17f7b1552cbdb39b227029cf5d.js",
   "service-worker.js": "/bookfinder/service-worker.js",
-  "static/css/main.f9b155be.chunk.css.map": "/bookfinder/static/css/main.f9b155be.chunk.css.map"
+  "static/css/main.b563032c.chunk.css.map": "/bookfinder/static/css/main.b563032c.chunk.css.map"
 }
