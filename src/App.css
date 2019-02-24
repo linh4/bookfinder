@@ -44,9 +44,13 @@ h1 {
   outline: none;
   border: 1px solid #ebc0cb;
 }
+.search-bar:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
 .search-bar::-webkit-search-cancel-button{
   position:relative;
   right:20px;
+  background: #fff;
   font-size: 2em;
 }
 .search-btn {

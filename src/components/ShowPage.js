@@ -10,6 +10,7 @@ const override = css`
 const imgLink = "https://images.unsplash.com/photo-1537495329792-41ae41ad3bf0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
 
 const renderBooks = (books) => {
+  console.log(books)
   return books.map(book => {
     const info = book.volumeInfo
     return (<div key={book.id} className="each-book">
@@ -18,7 +19,7 @@ const renderBooks = (books) => {
 
       <div className="info-box">
         <h2>{info.title}</h2>
-        {info.authors ? info.authors.map(author => <p key={author}>By: {author}</p>) : <div>By: No authors</div>}
+        {info.authors ? info.authors.map(author => <p key={author}>By: {author}</p>) : <p>By: No authors</p>}
 
         <p>Published By: {info.publisher}</p>
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Search from './components/Search'
 import ShowPage from './components/ShowPage'
+import { API_KEY } from './keys.js'
 
 class App extends Component {
 
@@ -16,7 +17,7 @@ class App extends Component {
     } else {
       this.setState({books: [], loading: true})
       setTimeout(() => {
-        return fetch(`https://www.googleapis.com/books/v1/volumes?q=${term}`)
+        return fetch(`https://www.googleapis.com/books/v1/volumes?q=${term}&maxResults=20&key=${API_KEY}`)
         .then(res => res.json())
         .then(data => this.setState({books: data.items, loading: false}))
         .catch(err => console.log(err))
