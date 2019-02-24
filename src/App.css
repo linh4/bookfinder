@@ -53,6 +53,11 @@ h1 {
   background: #CD637E;
   color: #fff;
   padding: 9px 16px;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+.search-btn:focus {
+  outline: none;
 }
 .empty-term {
   margin-top: -60px;
@@ -112,7 +117,8 @@ h2 {
   border-radius: 7px;
   transition: ease 0.2s;
 }
-.link-btn:hover {
+.link-btn:hover,
+.search-btn:hover {
   background: #d78297;
 }
 
