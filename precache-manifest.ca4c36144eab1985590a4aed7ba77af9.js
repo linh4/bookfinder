@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/bookfinder/static/js/runtime~main.ea931453.js"
   },
   {
-    "revision": "f47d7dc40507939f0f58",
-    "url": "/bookfinder/static/js/main.f47d7dc4.chunk.js"
+    "revision": "6bee7eb3d72cbe72c7bc",
+    "url": "/bookfinder/static/js/main.6bee7eb3.chunk.js"
   },
   {
     "revision": "66778f58d72af9cc3df6",
     "url": "/bookfinder/static/js/2.66778f58.chunk.js"
   },
   {
-    "revision": "f47d7dc40507939f0f58",
-    "url": "/bookfinder/static/css/main.c1db15b2.chunk.css"
+    "revision": "6bee7eb3d72cbe72c7bc",
+    "url": "/bookfinder/static/css/main.76013fa3.chunk.css"
   },
   {
-    "revision": "a26012e71b276b3c8b5df20734e0bea2",
+    "revision": "009f44cd5c141b82059d5e8bb7595a93",
     "url": "/bookfinder/index.html"
   }
 ];
